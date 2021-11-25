@@ -18,6 +18,6 @@ public class MessageController {
 
     @PostMapping("/send")
     public void send(@RequestBody String message) {
-        messageProducer.sentToQueue(message);
+        messageProducer.sendToQueue(message);
     }
 }

@@ -15,7 +15,7 @@ public class MessageProducer {
     @Autowired
     private AmazonSQS amazonSQS;
 
-    public void sentToQueue(String message) {
+    public void sendToQueue(String message) {
         final SendMessageRequest sendMessageRequest = new SendMessageRequest()
                 .withQueueUrl(queueName)
                 .withMessageBody(message);
